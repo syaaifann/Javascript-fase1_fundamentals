@@ -250,90 +250,6 @@ Di JavaScript, alat-alat ini disebut **Operator**.
 
 ---
 
-# ➗ Part 3: Operator (Alat Pengolah Barang)
-
-### 🧩 Analogi: "Mesin di Pabrik Logistik"
-
-Kalau variabel adalah kotak, maka Operator adalah **mesin-mesin otomatis** yang ada di dalam gudang:
-
-* **Operator Aritmatika**: Ini adalah **mesin hitung**. Dia bisa menambah, mengurangi, atau membelah isi kotak yang bertipe *Number*.
-* **Operator Penugasan (Assignment)**: Ini adalah **mesin pengisi**. Dia bertugas memasukkan barang ke dalam kotak atau menambah isinya secara otomatis.
-* **Operator Penggabung**: Ini adalah **mesin lem**. Khusus untuk tipe *String*, operator `+` berubah fungsi menjadi lem yang menyambungkan dua teks.
-
----
-
-### 📚 Teori: Alat-Alat Utama yang Sering Dipakai
-
-#### 1. Operator Aritmatika (Matematika Dasar)
-
-* `+` : Tambah
-* `-` : Kurang
-* `*` : Kali
-* `/` : Bagi
-* `%` : **Modulo** (Sisa Bagi).
-> **Analogi Modulo**: Kamu punya 10 kelereng, mau dibagikan ke 3 anak sama rata. Masing-masing dapat 3, nah **sisa 1** kelereng yang tidak bisa dibagi itulah hasil Modulo ($10 \% 3 = 1$).
-
-
-* `**` : Pangkat (Misal $2^{3}$ ditulis `2 ** 3`).
-
-#### 2. Operator Penugasan (Jalan Pintas)
-
-Selain `=` untuk mengisi, ada cara cepat untuk mengubah isi kotak:
-
-* `+=` : Isi lama ditambah nilai baru. (Contoh: `skor += 5` artinya skor nambah 5).
-* `-=` : Isi lama dikurangi nilai baru.
-
----
-
-### 🛠️ Praktek: Simulasi Transaksi Sederhana
-
-Buka `script.js` kamu. Kita akan mulai mencicil logika untuk **Project Fase 1 (Digital Wallet)**.
-
-```javascript
-// 1. Persiapan awal
-let saldoAwal = 100000;
-let hargaKopi = 25000;
-let hargaDonat = 15000;
-
-// 2. Proses Belanja (Aritmatika)
-let totalBelanja = hargaKopi + hargaDonat;
-let sisaSaldo = saldoAwal - totalBelanja;
-
-console.log("Total belanjaan kamu: Rp" + totalBelanja);
-console.log("Sisa saldo setelah belanja: Rp" + sisaSaldo);
-
-// 3. Dapat Bonus Saldo (Penugasan / Assignment)
-// Misal dapat cashback Rp5.000
-sisaSaldo += 5000; // Ini sama saja dengan: sisaSaldo = sisaSaldo + 5000
-
-console.log("Selamat! Dapat cashback. Saldo sekarang: Rp" + sisaSaldo);
-
-// 4. Kasus Modulo (Sisa bagi)
-// Kamu punya 10 donat, mau dimasukin ke kotak yang muat 3 donat.
-let sisaDonat = 10 % 3;
-console.log("Donat yang tidak masuk kotak (sisa): " + sisaDonat);
-
-```
-
----
-
-### 🔍 Kenapa Ini Penting?
-
-Tanpa operator, variabelmu cuma jadi pajangan. Operatorlah yang membuat aplikasi bisa **berhitung**. Bayangkan aplikasi belanja tanpa operator pengurangan; saldo pembeli tidak akan pernah berkurang meskipun sudah borong barang!
-
----
-
-### 💡 Tantangan Part 3 (Logic Challenge)
-
-1. Buat variabel `let tabungan` dengan nilai `1000000` (1 juta).
-2. Gunakan operator penugasan (`*=`) untuk melipatgandakan tabunganmu menjadi 2 kali lipat karena "investasi".
-3. Kurangi tabungan tersebut sebesar `500000` menggunakan operator `-=`.
-4. Tampilkan hasil akhirnya di console dengan kalimat: *"Hasil investasi dan pengeluaran saya: [tabungan]"*.
-
-**Sudah mulai terasa kan bagaimana angka-angka itu bergerak? Kalau sudah paham alat hitungnya, kita lanjut ke Part 4: String Manipulation (Cara bermain-main dengan teks agar lebih keren)!** ⚡
-
----
-
 Siap, kencangkan sabuk pengaman! Kita masuk ke **Part 4: String Manipulation**.
 
 Kalau di Part 3 kita fokus ke "Mesin Hitung" (Angka), sekarang kita fokus ke **"Mesin Cetak"** (Teks). Kita akan belajar cara merangkai kata agar tidak kaku dan terlihat profesional.
@@ -535,3 +451,78 @@ Jika kamu bisa menjalankan kode di atas dan memahaminya, selamat! Kamu sudah men
 **Fase 1 Selesai!** Kita sudah punya "otak" yang bisa menghitung. Di **Phase 2**, kita akan belajar cara membuat si "otak" ini mengambil keputusan otomatis (seperti: "Kalau saldo kurang, tampilkan peringatan merah").
 
 **Siap lanjut ke Part 6 (Phase 2: If-Else)?** 🚀
+
+---
+
+# 🚦 Part 6: Pengkondisian (If, Else If, Else)
+
+### 🧩 Analogi: "Mesin Vending Machine"
+
+Bayangkan kamu sedang berdiri di depan mesin minuman otomatis:
+
+* **`if` (Rencana A)**: Kamu menekan tombol Cola. Mesin mengecek: "Apakah uangmu cukup?". Jika **Ya**, Cola keluar.
+* **`else if` (Rencana B)**: Jika uangmu tidak cukup untuk Cola, mesin mengecek: "Apakah uangmu cukup untuk air mineral?". Jika **Ya**, air mineral keluar.
+* **`else` (Pilihan Terakhir)**: Jika uangmu tidak cukup untuk apapun, mesin berbunyi *Tiiit!* dan menampilkan pesan: "Maaf, saldo tidak cukup."
+
+---
+
+### 📚 Teori: Membuat Cabang Keputusan
+
+Dalam JavaScript, kita menggunakan tanda kurung `()` untuk syaratnya, dan kurung kurawal `{}` untuk instruksi yang dijalankan jika syarat itu benar.
+
+```javascript
+if (syarat_pertama) {
+    // Jalankan kode ini kalau syarat_pertama TRUE
+} else if (syarat_kedua) {
+    // Jalankan kode ini kalau syarat_pertama FALSE, tapi syarat_kedua TRUE
+} else {
+    // Jalankan kode ini kalau SEMUA syarat di atas FALSE
+}
+
+```
+
+---
+
+### 🛠️ Praktek: Sistem Filter Umur Bioskop
+
+Mari kita buat sistem yang mengecek apakah seseorang boleh menonton film berdasarkan umurnya.
+
+```javascript
+let umur = 15;
+
+console.log(`Umur kamu: ${umur} tahun`);
+
+if (umur >= 17) {
+    console.log("Akses Diterima: Silahkan menonton film dewasa.");
+} else if (umur >= 13) {
+    console.log("Akses Terbatas: Kamu hanya boleh menonton film remaja.");
+} else {
+    console.log("Akses Ditolak: Kamu hanya boleh menonton kartun anak-anak.");
+}
+
+```
+
+---
+
+### 🔍 Kenapa Ini Penting?
+
+Tanpa `if-else`, websitemu tidak akan bisa memberikan respon yang berbeda kepada user.
+
+* Kalau password benar -> Masuk ke Dashboard.
+* Kalau password salah -> Tampilkan pesan error merah.
+Logika "Jika - Maka" adalah inti dari semua aplikasi hebat di dunia.
+
+---
+
+### 💡 Tantangan Part 6 (Decision Challenge)
+
+1. Buat variabel `let nilaiUjian = 85`.
+2. Gunakan `if`, `else if`, dan `else` untuk memberikan predikat:
+* Nilai **90 ke atas** -> "Sangat Memuaskan"
+* Nilai **70 - 89** -> "Memuaskan"
+* Nilai **di bawah 70** -> "Coba Lagi Tahun Depan"
+
+
+3. Ubah-ubah angka `nilaiUjian` kamu untuk memastikan semua pesan muncul di console.
+
+**Bagaimana? Apakah si "Persimpangan Jalan" ini sudah jelas logikanya? Jika sudah, kita lanjut ke Part 7: Switch Case (Cara membuat pilihan yang lebih rapi jika opsinya banyak)!** ⚡
