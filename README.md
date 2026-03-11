@@ -526,3 +526,94 @@ Logika "Jika - Maka" adalah inti dari semua aplikasi hebat di dunia.
 3. Ubah-ubah angka `nilaiUjian` kamu untuk memastikan semua pesan muncul di console.
 
 **Bagaimana? Apakah si "Persimpangan Jalan" ini sudah jelas logikanya? Jika sudah, kita lanjut ke Part 7: Switch Case (Cara membuat pilihan yang lebih rapi jika opsinya banyak)!** ⚡
+
+---
+
+Lanjut! Kita masih di **Phase 2 (Control Flow)**. Kalau di Part 6 kita belajar tentang persimpangan jalan yang luas (`if-else`), sekarang kita akan belajar tentang **"Tombol Lift"** dan **"Jalan Pintas"**.
+
+---
+
+# 🔘 Part 7: Switch Case & Ternary Operator
+
+### 🧩 Analogi 1: "Tombol Lift" (Switch Case)
+
+Bayangkan kamu masuk ke dalam lift di sebuah mall:
+
+* Kamu menekan tombol angka tertentu.
+* Lift tidak akan bertanya "Apakah tombol ini lebih besar dari 1?", tapi dia langsung mengecek: "Apakah ini tombol 1? Apakah ini tombol 2? Atau tombol 3?".
+* **`switch`** sangat cocok digunakan jika kamu punya satu variabel yang nilainya sudah pasti (spesifik), bukan berupa rentang (seperti umur > 17).
+
+### 🧩 Analogi 2: "Gerbang Tol Otomatis" (Ternary Operator)
+
+Pernah lihat papan pengumuman singkat yang cuma punya dua pilihan?
+
+* "Punya kartu? Tempel : Ambil tiket."
+* **Ternary Operator** adalah jalan pintas untuk `if-else` yang sangat sederhana. Daripada menulis 5 baris kode, kamu bisa merangkumnya dalam **1 baris** saja.
+
+---
+
+### 📚 Teori: Cara Kerja Si "Pemilih Cepat"
+
+#### 1. Switch Case
+
+Kita menggunakan `switch` untuk memeriksa satu nilai, lalu `case` untuk setiap pilihannya. Jangan lupa gunakan **`break`** agar liftnya berhenti di lantai yang tepat dan tidak meluncur ke bawah terus.
+
+#### 2. Ternary Operator
+
+Rumusnya: `(kondisi) ? "Hasil jika Benar" : "Hasil jika Salah";`
+
+---
+
+### 🛠️ Praktek: Menu Kantin Digital
+
+Mari kita coba di `script.js` kamu:
+
+```javascript
+// --- CONTOH SWITCH CASE ---
+let nomorMenu = 2;
+
+switch (nomorMenu) {
+    case 1:
+        console.log("Kamu memilih: Nasi Goreng");
+        break;
+    case 2:
+        console.log("Kamu memilih: Mie Ayam");
+        break;
+    case 3:
+        console.log("Kamu memilih: Ayam Bakar");
+        break;
+    default:
+        console.log("Menu tidak tersedia.");
+}
+
+// --- CONTOH TERNARY OPERATOR ---
+let jam = 19;
+// Jika jam kurang dari 18, maka "Selamat Siang", jika tidak "Selamat Malam"
+let ucapan = (jam < 18) ? "Selamat Siang" : "Selamat Malam";
+
+console.log(ucapan);
+
+```
+
+---
+
+### 🔍 Perbedaan Penting: Kapan pakai yang mana?
+
+* **`if-else`**: Pakai kalau syaratnya rumit atau berupa rentang (Contoh: nilai antara 80-100).
+* **`switch`**: Pakai kalau pilihannya banyak tapi sudah pasti nilainya (Contoh: pilihan menu 1, 2, 3 atau hari Senin, Selasa, Rabu).
+* **`ternary`**: Pakai kalau pilihannya cuma dua (Ya/Tidak) dan kodenya sangat pendek.
+
+---
+
+### 💡 Tantangan Part 7 (Efficiency Challenge)
+
+1. Buat variabel `let kodePromo = "DISKON30"`.
+2. Gunakan **Switch Case** untuk mengecek:
+* Jika `"DISKON10"`, cetak "Potongan 10%".
+* Jika `"DISKON30"`, cetak "Potongan 30%".
+* Selain itu, cetak "Kode tidak valid".
+
+
+3. Buat variabel `let umur = 20`. Gunakan **Ternary Operator** untuk mengecek apakah user sudah dewasa atau belum (syarat: 18 tahun). Masukkan hasilnya ke variabel `let status` lalu cetak.
+
+**Bagaimana? Apakah lift dan jalan pintas ini membuat kodemu lebih rapi? Jika sudah paham, kita akan lanjut ke Part 8: Perulangan Dasar (Cara menyuruh komputer bekerja lembur tanpa mengeluh)!** ⚡
