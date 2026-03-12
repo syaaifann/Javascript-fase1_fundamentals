@@ -617,3 +617,86 @@ console.log(ucapan);
 3. Buat variabel `let umur = 20`. Gunakan **Ternary Operator** untuk mengecek apakah user sudah dewasa atau belum (syarat: 18 tahun). Masukkan hasilnya ke variabel `let status` lalu cetak.
 
 **Bagaimana? Apakah lift dan jalan pintas ini membuat kodemu lebih rapi? Jika sudah paham, kita akan lanjut ke Part 8: Perulangan Dasar (Cara menyuruh komputer bekerja lembur tanpa mengeluh)!** ⚡
+
+---
+
+Sekarang kita masuk ke bagian yang akan membuatmu merasa punya "kekuatan super" sebagai programmer. Kita masuk ke **Part 8: Perulangan Dasar (Looping)**.
+
+Kalau sebelumnya komputer cuma bisa memilih jalan (If-Else), sekarang kita akan menyuruh dia melakukan tugas yang membosankan berulang-ulang dengan kecepatan kilat.
+
+---
+
+# 🔄 Part 8: Perulangan Dasar (Si Pekerja Keras)
+
+### 🧩 Analogi: "Hukuman Menulis di Papan Tulis"
+
+Bayangkan jaman sekolah dulu kamu dihukum guru untuk menulis kalimat *"Saya tidak akan telat lagi"* sebanyak 100 kali.
+
+* **Cara Manual**: Tanganmu keriting, mata pegal, dan butuh waktu satu jam.
+* **Cara JavaScript (Looping)**: Kamu cuma bilang ke komputer: "Tulis kalimat ini, mulai dari hitungan 1 sampai 100."
+* **Hasilnya**: Dalam waktu kurang dari 1 detik, 100 kalimat selesai dicetak tanpa ada kesalahan ejaan satu pun!
+
+---
+
+### 📚 Teori: Dua Jenis "Mandor" Looping
+
+Ada banyak jenis loop, tapi dua ini adalah yang paling sering digunakan:
+
+#### 1. `for` Loop (Si Mandor Target)
+
+Digunakan kalau kamu **sudah tahu pasti** berapa kali harus mengulang.
+
+* "Lari 5 putaran ya!" (Targetnya jelas: 5).
+
+#### 2. `while` Loop (Si Mandor Kondisi)
+
+Digunakan kalau kamu **belum tahu pasti** kapan berhentinya, yang penting selama syaratnya masih terpenuhi, jalan terus!
+
+* "Lari terus sampai hujan turun!" (Berhenti kalau hujan, entah di putaran keberapa).
+
+---
+
+### 🛠️ Praktek: Menghitung Otomatis
+
+Buka file `script.js` kamu. Kita coba buat komputer menghitung untuk kita.
+
+```javascript
+// --- 1. CONTOH FOR LOOP ---
+console.log("--- For Loop: Lari 5 Putaran ---");
+for (let i = 1; i <= 5; i++) {
+    // i adalah variabel 'counter' (penghitung)
+    // i++ artinya i nambah 1 setiap selesai satu putaran
+    console.log(`Putaran ke-${i}`);
+}
+
+// --- 2. CONTOH WHILE LOOP ---
+console.log("\n--- While Loop: Menunggu Nyawa Habis ---");
+let nyawa = 3;
+
+while (nyawa > 0) {
+    console.log(`Pemain masih hidup. Sisa nyawa: ${nyawa}`);
+    nyawa--; // Kurangi nyawa setiap kali loop berjalan
+}
+
+console.log("GAME OVER! Nyawa sudah habis.");
+
+```
+
+---
+
+### 🔍 Kenapa Ini Penting?
+
+Coba bayangkan aplikasi Instagram. Bagaimana dia menampilkan ratusan postingan di *feed* kamu? Programmernya tidak menulis kode satu-satu untuk tiap postingan. Mereka cuma pakai **Looping**:
+*"Ambil data dari server, lalu **looping** (ulang) tampilkan fotonya sampai datanya habis."*
+
+---
+
+### 💡 Tantangan Part 8 (Automation Challenge)
+
+1. Buatlah sebuah `for` loop yang menghitung mundur dari **10 sampai 1**.
+2. Setelah hitungan mencapai 1, cetak kalimat: **"BOOM! Roket meluncur! 🚀"**.
+3. Coba buat `while` loop sederhana yang mensimulasikan "Mengisi Baterai". Mulai dari `let baterai = 0`, lalu tampilkan pesan *"Cas HP... [baterai]%"* sampai baterainya mencapai 100. (Tips: Tambahkan `baterai += 10` di dalam loop).
+
+**Bagaimana? Apakah kamu sudah merasakan betapa efisiennya menyuruh komputer bekerja? Jika sudah paham, kita akan masuk ke Part 9: Nested Loop (Loop di dalam Loop - Si Pembuat Tabel)!** ⚡
+
+Apakah kamu mau saya bantu jelaskan tentang bahaya "Infinite Loop" (Loop yang tidak pernah berhenti)?
