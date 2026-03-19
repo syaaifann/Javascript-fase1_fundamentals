@@ -38,22 +38,18 @@ Progress: ![Progress](https://geps.dev/progress/45) (45%)
 - [ ] **Part 14:** Hoisting (Misteri Pengangkatan Kode).
 - [ ] 🏆 **Project 3:** *Personal Assistant Bot* (Bot Pengolah Data).
 
----
-
-## ⏳ MASA DEPAN (Yang Akan Datang)
-
-### 📦 Phase 4: Data Structure
+## 📦 Phase 4: Data Structure
 - [ ] **Part 15-16:** Array (Koleksi barang) & Array Methods (`map`, `filter`).
 - [ ] **Part 17-18:** Object (Data manusiawi) & Array of Objects.
 - [ ] 🏆 **Project 4:** *Simple E-Commerce Catalog*.
 
-### 🌐 Phase 5: The DOM (Menghidupkan Website)
+## 🌐 Phase 5: The DOM (Menghidupkan Website)
 - [ ] **Part 19-20:** DOM Selection & Manipulation.
 - [ ] **Part 21:** Event Listener (Klik, Ketik, Scroll).
 - [ ] **Part 22:** Local Storage (Simpan data meski browser ditutup).
 - [ ] 🏆 **Project 5:** *Dynamic To-Do List*.
 
-### 🚀 Phase 6: Advanced & Final Boss
+## 🚀 Phase 6: Advanced & Final Boss
 - [ ] **Part 23:** Asynchronous (`setTimeout` & `Intervals`).
 - [ ] **Part 24:** Fetch API (Ambil data dari internet / API luar).
 - [ ] **Part 25:** 🏁 **MEGA PROJECT:** *The Weather App* atau *Movie Finder*.
@@ -87,7 +83,7 @@ Bayangkan sebuah gudang. Kamu punya banyak kotak di sana:
 Pertama, hubungkan file JS kamu di bagian paling bawah tag `<body>` pada HTML:
 ```html
 <script src="script.js"></script>
-
+```
 
 ---
 
