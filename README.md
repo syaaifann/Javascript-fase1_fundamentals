@@ -61,6 +61,36 @@ Progress: ![Progress](https://geps.dev/progress/45) (45%)
 
 ---
 
+## 🏗️ Part 1: Hello World & Variables (Pondasi Dasar)
+
+Langkah pertama dalam belajar JavaScript adalah memahami bagaimana cara menghubungkan kode kita ke browser dan bagaimana cara menyimpan data ke dalam "kotak" bernama Variabel.
+
+### 🧩 Analogi: "Kotak Penyimpanan"
+Bayangkan sebuah gudang. Kamu punya banyak kotak di sana:
+* **`let` (Kotak Terbuka):** Kamu bisa menaruh barang, lalu besok menggantinya dengan barang lain. (Nilainya bisa berubah).
+* **`const` (Kotak Terkunci):** Begitu kamu isi barang dan kunci, barang itu tidak boleh diganti selamanya. (Nilainya tetap).
+
+---
+
+### 📚 Teori: Cara Menghubungkan & Menyimpan Data
+
+1. **Internal JS**: Menulis kode di dalam tag `<script>` langsung di file HTML.
+2. **External JS**: Menulis kode di file `.js` terpisah (Cara yang lebih rapi dan profesional).
+3. **Variable Declaration**: 
+   - `let`: Digunakan untuk data yang akan berubah (Contoh: Skor game, total belanja).
+   - `const`: Digunakan untuk data yang permanen (Contoh: Nama user, API Key, Tanggal lahir).
+
+---
+
+### 🛠️ Praktek Kode
+
+Pertama, hubungkan file JS kamu di bagian paling bawah tag `<body>` pada HTML:
+```html
+<script src="script.js"></script>
+
+
+---
+
 ### 🧩 Analogy Mode: "Menyambungkan Saraf ke Tubuh"
 
 Bayangkan file **HTML** adalah tubuh robot yang keren. Tapi tanpa **JavaScript**, robot itu cuma patung pajangan.
